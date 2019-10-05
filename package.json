@@ -1,0 +1,23 @@
+{
+  "name": "gmail",
+  "version": "1.0.0",
+  "description": "Gmail as an electron app",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron .",
+    "build": "electron-packager . gmail --platform linux --arch x64 --out dist/ --icon=assets/icons/gmail.png",
+    "deb64": "electron-installer-debian --src dist/gmail-linux-x64/ --dest dist/installers/ --arch amd64 --icon=dist/gmail-linux-x64/resources/app/assets/icons/gmail.png"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-builder": "^21.2.0",
+    "electron-installer-debian": "^2.0.1",
+    "electron-installer-snap": "^4.0.0",
+    "electron-packager": "^14.0.6"
+  },
+  "dependencies": {
+    "electron": "^6.0.11",
+    "electron-context-menu": "^0.15.0"
+  }
+}
